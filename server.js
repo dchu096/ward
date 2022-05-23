@@ -33,11 +33,11 @@ app.get('/verify/:verifyId?', (req, res) => {
 
 // POST /verify/id
 app.post('/verify/:verifyId?', async (req, res) => {
-    if (!req.body || !req.body['h-captcha-response']) return res.sendFile(path.join(__dirname, '/html/invalidLink.html'));
+    if (!req.body || !req.body['g-recaptcha-response']) return res.sendFile(path.join(__dirname, '/html/invalidLink.html'));
 
     const response = await axios({
         method: 'post',
-        url: `https://hcaptcha.com/siteverify?secret=${config.recaptcha['secret-key']}&response=${req.body['h-captcha-response']}`,
+        url: `https://www.google.com/recaptcha/api/siteverify?secret=${config.recaptcha['secret-key']}&response=${req.body['g-recaptcha-response']}`,
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         }

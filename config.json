@@ -1,21 +1,19 @@
 {
-    "domain": "localhost",
+    "domain": "verify.hostingremade.com",
     "https": false,
     "discord": {
-        "token": "",
-        "guild-id": "",
-        "verified-role-id": "",
-        "_comment": "Below is for users that want to have a role removed upon verification, if you want this, set remove-role to true, and set your remove role ID.",
-        "remove-role": false,
-        "remove-role-id": "",
-        "prefix": "!",
+        "token": "", //your bot token. Please use https://discord.com/developers/applications
+        "guild-id": "", //Please enable developer option in your discord client and copy your server ID, paste it here
+        "verified-role-id": "", //same, but for role this time
+        "remove-role": false, //Give a role before verify (dyno or some sort) and after verify delete that role.
+        "remove-role-id": "", // the role id for the bot to remove 
+        "prefix": "///", //prefix is what your bot responds to. such as !help or ///help. Change it to anything you like. Just dont use \ for prefix
         "status": "Unverified users!",
-        "_comment": "By default, rules are set to disabled, this means rules will be hidden. If you want to use the rules function, change disabled to your rules. Please ensure you use \n for each line break and do not use any symbols that could interfear with JSON.",
-        "rulesenabled": false,
-        "rules": "Type your rules here if rulesenabled is enabled, ensure to use \n for new lines"
+        "rulesenabled": false, //leave this false if you dont want errors all over the screen
+        "rules": "Type your rules here if rulesenabled is enabled, ensure to use \n for new lines" //leave this as is
     },
     "recaptcha": {
-        "secret-key": "",
-        "public-key": ""
+        "secret-key": "", //get from google recaptcha
+        "public-key": "" //get from google recaptcha
     }
 }
